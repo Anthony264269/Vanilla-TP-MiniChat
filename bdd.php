@@ -12,15 +12,15 @@ if (
 
     
     require_once('./connect.php');
-
-    $requete = $database->prepare("INSERT INTO user (id, pseudo) 
-                    VALUES (:id,:pseudo)");
+}
+    $requete = $database->prepare("INSERT INTO message (pseudo, content) 
+                    VALUES (:pseudo, :content)");
 
     $result = $requete->execute([
-        'id' => $_POST['id'],
         'pseudo' => $_POST['pseudo'],
+        'content' => $_POST['content'],
        
     ]);
-}
+
 
 header("Location: index.php");
