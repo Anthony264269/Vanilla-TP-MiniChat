@@ -1,0 +1,25 @@
+#ma-nav{
+    background-color: rgb(98, 98, 101);
+   
+}
+
+#messages-block{
+ 
+    padding: 10px 0;
+    border-radius: 1px;
+    overflow: scroll;
+    height: 400px;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: white;
+}
+#write-message{
+
+    padding: 10px 0;
+    border-radius: 1pX;
+    height: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: white;
+}
