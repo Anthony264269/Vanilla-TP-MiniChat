@@ -10,7 +10,7 @@
 </head>
 
 <header>
-<nav class="navbar bg-body-tertiary fixed-top ">
+<nav class="navbar bg-body-danger fixed-top ">
   <div class="container-fluid d-flex justify-content-center">
     <a class="navbar-brand" href="#">Mini Chat</a>
     <div class="d-flex flex-direction-right">
@@ -21,8 +21,19 @@
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mini chat</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    
       </div>
-      
+      <?php
+ $request = $database->query('SELECT * FROM user ');
+ $messages = $request->fetchAll();
+
+
+ foreach ($messages as $message) { 
+?>
+<b><?php echo $message['pseudo']?><br/>
+<?php
+}
+?>
      </nav>
      </header>
 
